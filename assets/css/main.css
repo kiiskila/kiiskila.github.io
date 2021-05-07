@@ -8,6 +8,12 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
+#intro_blurb {
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 750px) {
   html {
     font-size: 16px;
