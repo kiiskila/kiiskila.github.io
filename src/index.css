@@ -1,6 +1,12 @@
-body, #root {
+body,
+#root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   height: 100%;
+}
+
+::selection {
+  background: #4dbe7a;
+  color: white;
 }
