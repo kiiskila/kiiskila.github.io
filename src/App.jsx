@@ -36,7 +36,7 @@ function App() {
     borderColor: "#4dbe7a",
     borderWidth: "2px",
     width: "50%",
-    alignSelf: "center",
+    //alignSelf: "center",
   };
 
   const firstBoxStyle = {
@@ -71,14 +71,32 @@ function App() {
         minHeight="100vh"
       >
         <Box sx={firstBoxStyle}>
-          <VStack spacing={4} color="white">
+          <VStack spacing={4} color="white" align="start">
             <Heading fontWeight={300}>WILL KIISKILA</Heading>
             <Divider sx={dividerStyle} />
             <Text fontSize="xl">
-              Hi! My name is Will and I&apos;m a computer science graduate
-              currently working as a security software developer for Immigrate
-              Software. I&apos;m passionate about building software to make life
-              easier, and I have an interest in cyber security!
+              Hi! My name is Will and I&apos;m a software developer with a
+              strong background in computer science. Currently, I am working as
+              a full-stack software developer for{" "}
+              <Link
+                href="https://immigrate.biz/"
+                textDecoration={"underline"}
+                isExternal
+              >
+                Immigrate Software
+              </Link>
+              . I am also currently pursuing a part-time Master of Science in
+              Computer Science from the{" "}
+              <Link
+                href="https://cdso.utexas.edu/mscs"
+                isExternal
+                textDecoration={"underline"}
+              >
+                University of Texas at Austin
+              </Link>
+              , online. I&apos;m passionate about developing innovative software
+              solutions and have a keen interest in software security and
+              software architecture.
             </Text>
             <HStack spacing={4} pt={2}>
               <Link href="mailto:kiiskila.will@gmail.com" isExternal>
@@ -117,20 +135,34 @@ function App() {
           justifyContent="center"
           p={12}
         >
-          <VStack spacing={4}>
+          <VStack spacing={4} align="center">
             <Heading color="#2c2d33" fontWeight={300}>
               About me
             </Heading>
             <Divider sx={dividerStyle} />
             <Text fontSize="xl" color="#999">
-              I’m a computer science graduate from Thompson Rivers University in
-              beautiful British Columbia. I am currently working remotely for
-              Immigrate Software as a software developer. My main role is
-              developing secure web apps with React, PHP, Laravel and
-              PostgreSQL. I also have previous experience working with React,
-              JavaScript, NodeJS and Android Studio (Java). In my spare time, I
-              like to play piano, learn foreign languages, work on bug bounties,
-              and go to the gym.
+              Originally from British Columbia, I now work remotely out of
+              Saskatoon as a full-stack developer. My primary focus is on
+              building robust web applications using React, TypeScript, PHP
+              (Laravel), and PostgreSQL. I'm also an active contributor to open
+              source, maintaining projects like{" "}
+              <Link
+                href="https://www.npmjs.com/package/lorem-ipsum-norwegian"
+                textDecoration={"underline"}
+                isExternal
+              >
+                lorem-ipsum-norwegian
+              </Link>{" "}
+              and{" "}
+              <Link
+                href="https://github.com/kiiskila/norsk-bokleser"
+                textDecoration={"underline"}
+                isExternal
+              >
+                norsk-bokleser
+              </Link>
+              . In my free time, I enjoy playing the piano, learning new
+              languages, and exploring cyber security.
             </Text>
           </VStack>
         </Box>
