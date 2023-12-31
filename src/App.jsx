@@ -45,7 +45,7 @@ const useResponsiveStyles = () => {
     firstBoxStyle: {
       flex: isMobile ? "none" : "1",
       height: isMobile ? "100vh" : "auto",
-      backgroundImage: `url('src/assets/beach.jpg')`,
+      backgroundImage: `url('/beach.jpg')`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       display: "flex",
