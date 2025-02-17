@@ -99,9 +99,18 @@ function App() {
             <Heading fontWeight={300}>WILL KIISKILA</Heading>
             <Divider sx={dividerStyle} />
             <Text fontSize="xl">
-              Hi! My name is Will and I&apos;m a software developer with a
-              strong background in computer science. Currently, I am working as
-              a full-stack software developer for{" "}
+              Hi! I’m Will, a software developer who loves understanding how
+              things work and applying that to solve problems and build cool
+              stuff. I’m currently a Senior Full Stack Developer with the{" "}
+              <Link
+                href="https://www2.gov.bc.ca/"
+                textDecoration={"underline"}
+                isExternal
+              >
+                Government of British Columbia
+              </Link>
+              , where I am working on a large scale legacy modernization
+              project. Previously, I worked as a developer at{" "}
               <Link
                 href="https://immigrate.biz/"
                 textDecoration={"underline"}
@@ -109,18 +118,17 @@ function App() {
               >
                 Immigrate Software
               </Link>
-              . I am also currently pursuing a part-time Master of Science in
-              Computer Science from the{" "}
+              . I hold a Bachelor of Computing Science from{" "}
               <Link
-                href="https://cdso.utexas.edu/mscs"
+                href="https://www.tru.ca/"
                 isExternal
                 textDecoration={"underline"}
               >
-                University of Texas at Austin
+                Thompson Rivers University
               </Link>
-              , online. I&apos;m passionate about developing innovative software
-              solutions and have a keen interest in software security and
-              software architecture.
+              , located in Kamloops, BC. My interests are in software
+              architecture, security, and working in collaborative team
+              environments.
             </Text>
             <HStack spacing={4} pt={2}>
               <ContactButton
@@ -162,11 +170,12 @@ function App() {
             </Heading>
             <Divider sx={dividerStyle} />
             <Text fontSize="xl" color="#999">
-              Originally from British Columbia, I now work remotely out of
-              Saskatoon as a full-stack developer. My primary focus is on
-              building robust web applications using React, TypeScript, PHP
-              (Laravel), and PostgreSQL. I am also an active contributor to open
-              source, maintaining projects like{" "}
+              Originally from Smithers, BC, I’ve moved around a few times and am
+              currently living and working remotely from Vancouver Island. My
+              focus is on building secure web applications using React,
+              TypeScript, Node.js, PHP (Laravel), and PostgreSQL. I’m also
+              passionate about CI/CD and DevOps, streamlining workflows to
+              deliver better software faster. I maintain projects like{" "}
               <Link
                 href="https://www.npmjs.com/package/lorem-ipsum-norwegian"
                 textDecoration={"underline"}
@@ -182,8 +191,9 @@ function App() {
               >
                 norsk-bokleser
               </Link>
-              . In my free time, I enjoy playing the piano, learning new
-              languages, and exploring cyber security.
+              . When I’m not coding, you’ll find me playing piano, learning new
+              programming and natural languages, or digging into cyber security
+              papers.
             </Text>
           </VStack>
         </Box>
