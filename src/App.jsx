@@ -1,3 +1,4 @@
+import React, { useContext } from "react";
 import {
   ChakraProvider,
   Box,
@@ -12,6 +13,9 @@ import {
 } from "@chakra-ui/react";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 import PropTypes from "prop-types";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { LanguageContext } from "./LanguageContext";
+import { translations } from "./translations";
 
 const useResponsiveStyles = () => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
@@ -86,9 +90,11 @@ ContactButton.propTypes = {
 function App() {
   const { isMobile, buttonStyle, dividerStyle, firstBoxStyle } =
     useResponsiveStyles();
+  const { language } = useContext(LanguageContext);
 
   return (
     <ChakraProvider>
+      <LanguageSwitcher />
       <Box
         display="flex"
         flexDirection={isMobile ? "column" : "row"}
@@ -98,45 +104,14 @@ function App() {
           <VStack spacing={4} color="white" align="start">
             <Heading fontWeight={300}>WILL KIISKILA</Heading>
             <Divider sx={dividerStyle} />
-            <Text fontSize="xl">
-              Hi! I’m Will, a software developer who loves understanding how
-              things work and applying that to solve problems and build cool
-              stuff. I’m currently a Senior Full Stack Developer with the{" "}
-              <Link
-                href="https://www2.gov.bc.ca/"
-                textDecoration={"underline"}
-                isExternal
-              >
-                Government of British Columbia
-              </Link>
-              , where I am working on a large scale legacy modernization
-              project. Previously, I worked as a developer at{" "}
-              <Link
-                href="https://immigrate.biz/"
-                textDecoration={"underline"}
-                isExternal
-              >
-                Immigrate Software
-              </Link>
-              . I hold a Bachelor of Computing Science from{" "}
-              <Link
-                href="https://www.tru.ca/"
-                isExternal
-                textDecoration={"underline"}
-              >
-                Thompson Rivers University
-              </Link>
-              , located in Kamloops, BC. My interests are in software
-              architecture, security, and working in collaborative team
-              environments.
-            </Text>
+            <Text fontSize="xl">{translations[language].welcome}</Text>
             <HStack spacing={4} pt={2}>
               <ContactButton
                 href="mailto:kiiskila.will@gmail.com"
                 icon={<FaEnvelope />}
                 buttonStyle={buttonStyle}
               >
-                Email
+                {translations[language].email}
               </ContactButton>
               <ContactButton
                 href="https://www.linkedin.com/in/wkiiskila"
@@ -166,34 +141,11 @@ function App() {
         >
           <VStack spacing={4} align="center">
             <Heading color="#2c2d33" fontWeight={300}>
-              About me
+              {translations[language].aboutMe}
             </Heading>
             <Divider sx={dividerStyle} />
             <Text fontSize="xl" color="#999">
-              Originally from Smithers, BC, I’ve moved around a few times and am
-              currently living and working remotely from Vancouver Island. My
-              focus is on building secure web applications using React,
-              TypeScript, Node.js, PHP (Laravel), and PostgreSQL. I’m also
-              passionate about CI/CD and DevOps, streamlining workflows to
-              deliver better software faster. I maintain projects like{" "}
-              <Link
-                href="https://www.npmjs.com/package/lorem-ipsum-norwegian"
-                textDecoration={"underline"}
-                isExternal
-              >
-                lorem-ipsum-norwegian
-              </Link>{" "}
-              and{" "}
-              <Link
-                href="https://github.com/kiiskila/norsk-bokleser"
-                textDecoration={"underline"}
-                isExternal
-              >
-                norsk-bokleser
-              </Link>
-              . When I’m not coding, you’ll find me playing piano, learning new
-              programming and natural languages, or digging into cyber security
-              papers.
+              {translations[language].about}
             </Text>
           </VStack>
         </Box>
